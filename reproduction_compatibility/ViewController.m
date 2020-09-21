@@ -40,7 +40,7 @@
     }
     id userInputArray = [[ModelUnderTestInput alloc] initWithBin_inputs: bin_inputs global_inputs: global_inputs symmetries: symmetries];
 
-    id options = [MLPredictionOptions alloc];
+    id options = [[MLPredictionOptions alloc] init];
     id output = [mlModel predictionFromFeatures: userInputArray options: options error: &error];
     if (error) {
         NSLog(@" error => %@ ", [error userInfo]);
